@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .about-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .about-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .about-section img {
+      width: 200px; /* Adjust the size as needed */
+      height: 200px;
+      border-radius: 50%; /* Makes the image round */
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      color: #333;
+    }
+  
+    /* Additional CSS for Projects Section */
+  .projects-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  .card {
+    box-shadow: 0 0 10px rgba(26, 25, 25, 0.9); /* Adds a subtle shadow around the card */
+  }
+  .card-img-top {
+    max-height: 180px; /* Adjust this value to fit the image properly in the card */
+    object-fit: cover; /* This makes sure the image covers the area properly */
+  }
+  .card-body {
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-text {
+    margin-bottom: 15px;
+  }
+
+    /* Additional CSS for Projects Section */
+    .research-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  .card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
+  }
+  .card-img-top {
+    max-height: 180px; /* Adjust this value to fit the image properly in the card */
+    object-fit: cover; /* This makes sure the image covers the area properly */
+  }
+  .card-body {
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-text {
+    margin-bottom: 15px;
+  }
+  
+  /* Additional CSS for Skills Section */
+  .skills-section .card {
+    box-shadow: 0 4px 6px rgba(13, 13, 13, 0.1);
+  }
+
+  .skills-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+  .skills-section .card-body {
+    padding: 20px;
+  }
+
+  .skills-section .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .skills-section .custom-range {
+    width: 100%;
+  }
+
+  @media (max-width: 576px) {
+    .skills-section .card {
+      margin-bottom: 20px;
+    }
+  }
+
+  .skills-section .skill-item input[type="range"] {
+  /* -webkit-appearance: none; */
+  background: transparent;
+}
+
+.skills-section .skill-item input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #000; /* Set the thumb color to black */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.skills-section .skill-item input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #000; /* Set the track color to black */
+  border-radius: 4px;
+}
+
+  
+  /* Additional CSS for Contact Section */
+  .contact-section {
+    padding: 50px 0;
+  }
+  .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .social-icon {
+    width: 50px; /* Size of your icons */
+    margin-bottom: 10px;
+  }
+  /* Hover effect for icons */
+  .social-icon:hover {
+    opacity: 0.7;
+  }
+  /* Style for links in the Contact section */
+  .contact-section a {
+    color: #fff;
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Allows for margin on the bottom */
+    margin-bottom: 10px;
+  }
+  .contact-section a:hover {
+    color: #ddd; /* Color when hovering over the link */
+  }
+  
+  /* CSS for Sticky Navbar */
+  .navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+  }
+  
+  /* Ensure padding is added to body to avoid content being hidden behind the navbar */
+  body { 
+    padding-top: 56px; /* Adjust this value based on the height of your navbar */
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Flexbox adjustment to move nav links to the right */
+  .navbar-nav {
+    margin-left: auto; /* This pushes the nav links to the right */
+    
+  }
+  
+  /* Style for navigation bar links */
+  .navbar-nav .nav-link {
+    color: white;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f8f9fa; /* Slightly lighter white when hovering over links */
+  }
+  
+  /* Media query for responsive navbar collapsing */
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: #343a40; /* Same as navbar color for seamless look */
+    }
+  }
+  
+  
+  </style>
+</head>
+<body>
+
+  
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="row justify-content-center align-items-center" style="min-height: 74vh;">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="text-center mb-4">Hi, I'm Bhargob</h2>
+              <div class="text-center mb-4">
+                <img src="images/me.png" alt="Profile Picture" class="rounded-circle img-fluid border border-dark" style="max-width: 200px;">
+              </div>
+              <p class="text-center lead mb-4">I am a Data Scientist with 5+ years of experience in developing data-driven algorithms. With a PhD in applied ML, I have a strong track record of developing innovative approaches for analyzing large data systems and providing informed decision-making.</p>
+              <p class="text-center mb-0">A data science volunteer and a Medium blog writer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mb-4 mt-0">
+        <div class="col-auto">
+          <a href="resume/BD-resume.pdf" target="_blank" class="btn btn-dark mr-3">Resume</a>
+          <a href="https://scholar.google.com/YOUR_PROFILE_URL" target="_blank" class="btn btn-dark">Publication</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="research-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Research</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="justify-content-center">
+              <img src="images/wexp/example01.png" class="card-img-top" style="max-width: 300px;" alt="Project 1">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Heteroscedastic Uncertainty in Regression Tasks</h5>
+              <p class="card-text">TAGI-V package that can analytically quantify aleatory uncertainty in Bayesian neural networks.</p>
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231223013061" class="btn btn-primary">Article</a>
+              <a href="https://github.com/lhnguyen102/cuTAGI/tree/UCI_Benchmark_Baseline/benchmarks" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/wexp/ex04.png" class="card-img-top"  alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Gaussian Multiplicative Approximation</h5>
+              <p class="card-text">GMA package that can capture non-harmonic patterns and nonlinear dependencies in time series.</p>
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/stc.2904" class="btn btn-primary">Article</a>
+              <a href="https://github.com/bhargobdeka/OpenBDLM/tree/ICOLD_benchmark" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/wexp/ex09.png" class="card-img-top" style="max-width: 300px;" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Uncertainty Quantification and Anomaly Detection in Time Series</h5>
+              <p class="card-text">AGVI package that allows uncertainty quantification and anomaly detection in real-time.</p>
+              <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/acs.3667" class="btn btn-primary">Article</a>
+              <a href="https://github.com/bhargobdeka/AGVI-python" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-01.jpeg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Speckly: A RAG Code Assistant</h5>
+              <p class="card-text">A chatbot designed to assist developers in understanding Speckle's developer documentation.</p>
+              <a href="https://medium.com/gitconnected/langgraph-fastapi-and-streamlit-gradio-the-perfect-trio-for-ai-development-f1a82775496a" class="btn btn-primary">Blog Post</a>
+              <a href="https://github.com/bhargobdeka/RAG-chatbot-Speckly" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-02.jpeg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">RAG Agent Workflow with LangGraph</h5>
+              <p class="card-text">A framework that provides more control over the LangChain Agent's actions.</p>
+              <a href="https://medium.com/gitconnected/designing-rag-agent-workflow-with-langgraph-861b002d9380" class="btn btn-primary">Blog Post</a>
+              <a href="https://github.com/bhargobdeka/LLM-Agents" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-03.jpeg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">LangChain Agents</h5>
+              <p class="card-text">A component that uses an LLM to interact with other tools and take actions to accomplish a task or a goal.</p>
+              <a href="https://medium.com/gitconnected/creating-rag-agents-with-langchain-e8759735922d" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-04.jpeg" class="card-img-top" alt="Project 4">
+            <div class="card-body">
+              <h5 class="card-title">Houseplant Health Check</h5>
+              <p class="card-text">A computer vision model to distinguish between healthy and wilted plants.</p>
+              <a href="https://www.linkedin.com/posts/bhargobdeka_machinelearning-ai-houseplants-activity-7116417134036930561-S57g/?utm_source=share&utm_medium=member_desktop" class="btn btn-primary">LinkedIn Post</a>
+              <a href="https://github.com/bhargobdeka/houseplant-healthy" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-05.jpeg" class="card-img-top" alt="Project 5">
+            <div class="card-body">
+              <h5 class="card-title">Machine Learning in Real Estate</h5>
+              <p class="card-text">An ML model for predicting permit approval times in Montreal, Quebec.</p>
+              <a href="https://www.linkedin.com/posts/bhargobdeka_ai-ml-realestate-activity-7158679492859682816-Up1s?utm_source=share&utm_medium=member_desktop" class="btn btn-primary">LinkedIn Post</a>
+              <a href="https://github.com/bhargobdeka/Real-estate-ML" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-06.jpg" class="card-img-top" alt="Project 6">
+            <div class="card-body">
+              <h5 class="card-title">Resume Analyzer</h5>
+              <p class="card-text">Created an ATS resume analyzer using Gemini Pro through Vertex AI.</p>
+              <a href="https://www.linkedin.com/posts/bhargobdeka_genai-gemini-googleai-activity-7155174798141132800-8rKI?utm_source=share&utm_medium=member_desktop" class="btn btn-primary">LinkedIn Post</a>
+              <a href="https://github.com/bhargobdeka/ATS-Resume-Analyzer" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <input type="range" class="custom-range" value="4" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">C++</h5>
+              <input type="range" class="custom-range" value="3" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">HTML & CSS</h5>
+              <input type="range" class="custom-range" value="3" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">ML Frameworks</h5>
+              <input type="range" class="custom-range" value="4" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">MLOps</h5>
+              <input type="range" class="custom-range" value="4" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Cloud Deployment</h5>
+              <input type="range" class="custom-range" value="3" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Generative AI</h5>
+              <input type="range" class="custom-range" value="3" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Technical Writing</h5>
+              <input type="range" class="custom-range" value="4" min="0" max="5" step="1" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section text-center text-white bg-dark">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6 text-center">
+          <div class="d-inline-flex align-items-center mb-3">
+            <i class="fas fa-envelope fa-2x mr-2"></i>
+            <span>bhargobdeka11@gmail.com</span>
+          </div>
+          <div class="d-inline-flex align-items-center mt-4"> <!-- Added mt-4 for top margin -->
+            <i class="fas fa-phone fa-2x mr-2"></i>
+            <span>+1 (438) 871-6711</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <div class="d-flex justify-content-center">
+          <a href="https://www.linkedin.com/in/bhargobdeka/" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+            <img src="icons/linkedin.png" alt="LinkedIn" class="img-fluid" style="max-width: 24px;">
+          </a>
+          <!-- <a href="#" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
+            <img src="icons/twitter.png" alt="Twitter" class="img-fluid" style="max-width: 24px;">
+          </a> -->
+          <a href="https://github.com/bhargobdeka" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="GitHub">
+            <img src="icons/github.png" alt="GitHub" class="img-fluid" style="max-width: 24px;">
+          </a>
+          <a href="https://medium.com/@bhargobdeka11" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="Medium">
+            <img src="icons/medium.png" alt="Medium" class="img-fluid" style="max-width: 24px;">
+          </a>
+          <!-- <a href="#" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="YouTube">
+            <img src="icons/youtube.png" alt="YouTube" class="img-fluid" style="max-width: 24px;">
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#research">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#contact">Contact</a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS for tooltips -->
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
+</html>

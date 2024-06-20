@@ -1,0 +1,256 @@
+
+"Prompt: instructions"
+
+I want to build a data science/AI-ML portfolio. First, I will give you some general instructions. I wish that you abide by these rules. Here they are:
+
+Provide HTML and CSS code
+Bootstrap Styling: Utilize Bootstrap for all styling purposes. Ensure
+that the website's design, including layout, typography, and
+responsive features, is consistently implemented using Bootstrap's
+framework and classes.
+Single File Format: Deliver all code (HTML, CSS) in a single file.
+Clear Guidance: As I am new to HTML and CSS, please provide me with
+clear instructions that are tailored for someone with my
+beginner-level understanding of these languages.
+Specifically:
+● Cumulative Building: Each new section of code should be designed to
+seamlessly integrate with the previous sections, building the website
+progressively. Please instruct me on exactly where to insert each new
+block of code within the existing structure, avoiding repetition of
+universal elements unless necessary for the task.
+● Specific Placement Instructions: For every new code snippet, provide
+explicit guidance on where it should be placed within the current
+file. For example, if a "Projects" section is to be added after an
+"About" section, instruct me to start the new code directly after the
+closing </section> tag of the "About" section.
+● Clarification and Avoidance of Redundancy: Ensure that the code
+snippets provided do not unnecessarily repeat elements that have
+already been established in the initial template.
+Respond yes if you understood these instructions
+
+
+Now, I will give you prompts for different sections. Starting with the about me section.
+I'd like to create an 'About' section for my portfolio website with a clean
+and modern design. The section should start with a large, centered headline
+that says 'About'. Below the headline, there should be a circular
+placeholder for an image, which should be centered horizontally within the
+section.
+Directly below the image placeholder, there should be two centered
+paragraphs of text. The text should be formatted to have a comfortable
+reading width, not stretching too wide on the page, perhaps aligned to the
+same width as the image above for a visually cohesive look.
+The design should be responsive, ensuring that it looks good on both mobile
+and desktop views.
+The image file for the profile should be referenced as 'images/me.png'
+and be set to display as a round shape with a solid border to give it the
+appearance of an avatar.
+
+Next is Projects section:
+Following the "About" section, please create a "Projects" section using
+Bootstrap's card layout. This section should be introduced by a centered
+heading "Projects." Below the heading, there should be three project cards
+aligned in a row on desktop view, stacking vertically on mobile.
+Each card should feature an image placeholder, with the following paths:
+"images/projects/image-01.jpeg," "images/projects/image-02.jpeg," and
+"images/projects/image-03.jpeg"
+Please include a card body below the image, starting with a project title,
+"Project 1," "Project 2," and "Project 3" for each card.
+Also include a brief description in the body using placeholder text (Lorem
+ipsum...), and two links at the bottom of the card: "Blog Post" and "Source
+Code," styled as buttons or simple text links.
+For the cards' layout, ensure they have equal width and margin, are
+centered within their container, and have some space between them. On
+smaller screens, the cards should stack vertically and be full width. Include a "view more" button below the three project card. When the "view more" button is clicked, three other projects should appear, i.e., "Project 4", "Project 5", and "Project 6" which are also aligned in a row on desktop view, stacking vertically on mobile and appear below the first three projects cards. 
+
+
+Please create a "Contact Me" section for my portfolio website, to be placed
+directly after the "Projects" section. The design should feature the
+following elements, styled using Bootstrap:
+● A large, centered heading that reads "Contact Me".
+● Below the heading, there should be two main pieces of contact
+information aligned horizontally: an email address and a phone
+number. Each piece of contact information should have an associated
+icon -- use a mail icon for the email and a phone icon for the
+number.
+● Underneath the contact information, provide a row of circular icons
+for social media and professional platforms. The icons should be for
+LinkedIn, Twitter, GitHub, Medium, and YouTube, and use the
+respective paths "icons/linkedin.png", "icons/twitter.png",
+"icons/github.png", "icons/medium.png", "icons/youtube.png".
+● Each icon should be enclosed within a circular button with a grey
+background color, and when hovered over, a tooltip should appear
+displaying the name of the platform.
+● The social media and professional platform icons should be centered
+below the contact information and should link to the corresponding
+URLs (you'll need to insert your actual URLs later).
+● The section should have a dark background with white text for high
+contrast.
+Ensure that the layout is responsive: the contact information and platform
+icons should stack vertically on smaller screens.
+
+
+
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+  <!-- About Section -->
+  <section class="about py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">About</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="text-center mb-4">
+            <img src="images/me.png" alt="Profile Picture" class="rounded-circle img-fluid border border-dark" style="max-width: 200px;">
+          </div>
+          <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula cursus vestibulum. Sed sit amet nisi non erat aliquet fermentum. Proin quis metus ullamcorper, vestibulum nulla at, egestas felis.</p>
+          <p class="text-center">Nulla facilisi. Sed dapibus purus eu nisi suscipit, ac facilisis ligula gravida. Praesent euismod suscipit urna, et pretium risus luctus a. Phasellus vestibulum lacus et quam tristique, eget dapibus lacus suscipit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-01.jpeg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-02.jpeg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-03.jpeg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary" id="viewMoreBtn">View More</button>
+      </div>
+      <div class="row justify-content-center d-none" id="moreProjects">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-01.jpeg" class="card-img-top" alt="Project 4">
+            <div class="card-body">
+              <h5 class="card-title">Project 4</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-02.jpeg" class="card-img-top" alt="Project 5">
+            <div class="card-body">
+              <h5 class="card-title">Project 5</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/projects/image-03.jpeg" class="card-img-top" alt="Project 6">
+            <div class="card-body">
+              <h5 class="card-title">Project 6</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6 text-center">
+          <div class="d-inline-flex align-items-center mb-3">
+            <i class="fas fa-envelope fa-2x mr-2"></i>
+            <span>your-email@example.com</span>
+          </div>
+          <div class="d-inline-flex align-items-center">
+            <i class="fas fa-phone fa-2x mr-2"></i>
+            <span>+1 (555) 555-5555</span>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+              <img src="icons/linkedin.png" alt="LinkedIn" class="img-fluid" style="max-width: 24px;">
+            </a>
+            <a href="#" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
+              <img src="icons/twitter.png" alt="Twitter" class="img-fluid" style="max-width: 24px;">
+            </a>
+            <a href="#" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="GitHub">
+              <img src="icons/github.png" alt="GitHub" class="img-fluid" style="max-width: 24px;">
+            </a>
+            <a href="#" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="Medium">
+              <img src="icons/medium.png" alt="Medium" class="img-fluid" style="max-width: 24px;">
+            </a>
+            <a href="#" class="btn btn-outline-light rounded-circle mx-2" data-toggle="tooltip" data-placement="top" title="YouTube">
+              <img src="icons/youtube.png" alt="YouTube" class="img-fluid" style="max-width: 24px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS for tooltips -->
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
+</html>
